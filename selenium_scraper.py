@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 def init_driver():
-    chrome_driver_path = r"C:\Users\yurim\Downloads\chrome-win32\chrome-win32\chromedriver.exe"  # Substitua pelo caminho real do chromedriver.exe
+    chrome_driver_path = r"C:\Users\yurim\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe" #"C:\Users\yurim\Downloads\chrome-win32\chrome-win32\chromedriver.exe"  # Substitua pelo caminho real do chromedriver.exe
     
     service = Service(chrome_driver_path)
     

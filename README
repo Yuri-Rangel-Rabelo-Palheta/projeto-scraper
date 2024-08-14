@@ -5,6 +5,7 @@ Projeto web scraper
 Para executar deve instalar
 
     pip install requests beautifulsoup4
+    pip install selenium
 
 executar
 

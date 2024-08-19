@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import random
 
-def search_google(query, num_pages=3, results_per_page=10, delay_range=(2, 5)):
+def search_google(query, num_pages=5, results_per_page=10, delay_range=(2, 5)):
     base_url = "https://www.google.com/search"
     urls = []
 

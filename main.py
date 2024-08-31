@@ -17,14 +17,14 @@ def main():
     google_urls = search_google(google_query)
     linkedin_data = search_linkedin(linkedin_query)
 
-    print("\nURLs dinâmicas encontradas - Google:", google_urls)
-    print("\nDados dinâmicos encontrados - LinkedIn:", linkedin_data)
+    #print("\nURLs dinâmicas encontradas - Google:", google_urls)
+    #print("\nDados dinâmicos encontrados - LinkedIn:", linkedin_data)
     
     # Extrair URLs de perfis do LinkedIn
     linkedin_urls = [data['link'] for data in linkedin_data]
 
     # Combinar todas as URLs
-    all_urls = google_urls + linkedin_urls + url_fixa
+    all_urls = url_fixa + google_urls + linkedin_urls #+ google_urls
 
     print("Todas as URLs:", all_urls)
     
@@ -47,17 +47,17 @@ def main():
             print(f"Falha ao buscar conteúdo da página: {url} após várias tentativas")
 
     # Adicionar dados do LinkedIn à lista de clientes
-    for linkedin_profile in linkedin_data:
-        all_clients.append({
-            'Nome': linkedin_profile.get('name'),
-            'Email': linkedin_profile.get('email'),
-            'Telefone': linkedin_profile.get('phone'),
-            'URL': linkedin_profile.get('link')
-        })
+    #for linkedin_profile in linkedin_data:
+    #    all_clients.append({
+    #        'Nome': linkedin_profile.get('name'),
+    #        'Email': linkedin_profile.get('email'),
+    #        'Telefone': linkedin_profile.get('phone'),
+    #        'URL': linkedin_profile.get('link')
+    #    })
 
     # Salvar os dados coletados em um arquivo CSV
     if all_clients:
-        save_to_csv(all_clients, 'clientes.csv')
+        save_to_csv(all_clients, 'clientes.csv')       
     else:
         print("Nenhum dado de cliente encontrado.")
 

@@ -12,6 +12,12 @@ def init_driver():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
+    #chrome_options=webdriver.ChromeOptions() 
+    chrome_options.add_experimental_option('excludeSwitch',['enable-logging']) 
+    chrome_options.add_argument('--log-level=3') 
+    #driver=webdriver.Chrome(executable_path='C:\Users\yurim\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe', options=chrome_options)
+
+    chrome_options=webdriver.ChromeOptions() 
     driver = webdriver.Chrome(service=service, options=chrome_options)
     return driver
 

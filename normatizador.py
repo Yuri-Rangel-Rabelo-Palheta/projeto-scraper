@@ -6,7 +6,7 @@ input_file = 'clientes.csv'  # Substitua pelo caminho do seu arquivo
 df = pd.read_csv(input_file)
 
 # Remover linhas duplicadas com base nas colunas 'email' e 'phone'
-df_cleaned = df.drop_duplicates(subset=['email', 'phone'])
+df_cleaned = df.drop_duplicates(subset=['email','phone'])
 
 # Gerar um novo nome de arquivo com a data e hora atual
 current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
